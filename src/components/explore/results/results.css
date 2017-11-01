@@ -1,0 +1,108 @@
+.bg-lightb, a {
+    color: #ffffff;
+}
+
+.link-wrapper {
+    margin-top: 10%;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.glyphicon {
+    border-radius: 500px;
+    padding: 2%;
+    background: rgba(55, 55, 55, 0.71);
+    margin-top: 4%
+}
+
+.glyphicon-plus {
+    margin-top:0;
+    padding: 1%;
+    color: #03bb4f !important;
+    cursor: pointer;
+}
+
+.max-h {
+    max-height: 100px;
+}
+
+.row {
+    margin-bottom: 2%;
+}
+
+.btn-comments {
+    position: absolute;
+    bottom: 12%;
+    right: 10%;
+    font-size: 13px;
+}
+
+.thumbnail-image {
+    object-fit: cover;
+    width: 100%;
+    margin: auto;
+    max-width: 260px;
+    cursor: pointer;
+}
+
+.col-md-3, .col-md-9 {
+    min-height: 100px;
+}
+
+.col-md-3 {
+    padding: 0;
+}
+
+.col-md-9 {
+    padding: 3%;
+}
+
+#artist-name {
+    font-weight: 100;
+    font-size: 17px;
+}
+
+#album-name {
+    font-size: 40px;
+}
+
+#on-spotify {
+    color: #03bb4f !important;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+    .thumbnail-image {
+        width: 50%;
+        height: 50%;
+    }
+
+    .col-md-3 {
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    .col-md-9 {
+        margin-top: 0;
+    }
+
+    .btn-comments {
+        padding: 2%;
+        padding-left: 5%;
+        padding-right: 5%;
+        right: 25%;
+        left: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 13px;
+    }
+
+    #album-name {
+        font-size: 30px;
+    }
+
+    .glyphicon {
+        margin-bottom: 20%;
+    }
+
+}
