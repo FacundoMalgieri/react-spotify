@@ -15,13 +15,6 @@
     margin-top: 4%
 }
 
-.glyphicon-plus {
-    margin-top:0;
-    padding: 1%;
-    color: #03bb4f !important;
-    cursor: pointer;
-}
-
 .max-h {
     max-height: 100px;
 }

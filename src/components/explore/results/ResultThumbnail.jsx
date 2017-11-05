@@ -1,16 +1,15 @@
 import React from 'react';
 import './results.css';
 import {Link} from 'react-router-dom';
-
-const ResultThumbnail = ({item}) => {
+const ResultThumbnail = ({item,buttonText,buttonUrl}) => {
 	if (item && item.images) {
 		return (
 			<div className='bg-lightb row mar-b'>
 				<div className="col-md-3">
-					<img src={item.images[0].url} alt='Album Image' className='thumbnail-image'/>
+					<img src={item.images[0].url} alt='Album' className='thumbnail-image'/>
 				</div>
 				<div className="col-md-9 mar-t">
-					<span id='artist-name'>{item.artists[0].name}</span>
+					<span id='artist-name' className='text-gray'>{item.artists[0].name}</span>
 					<br/>
 					<span id='album-name'>{item.name}</span>
 					<br/>
@@ -19,8 +18,8 @@ const ResultThumbnail = ({item}) => {
 						<span id='on-spotify'> Listen on Spotify</span>
 					</a>
 					<br/>
-					<Link to={`/comments/${item.id}`} className="btn btn-lg btn-default pull-right
-						btn-comments">VIEW COMMENTS</Link>
+					<Link to={buttonUrl} className="btn btn-lg btn-default pull-right
+						btn-comments">{buttonText}</Link>
 				</div>
 			</div>
 		);

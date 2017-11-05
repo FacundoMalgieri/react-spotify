@@ -1,6 +1,7 @@
 * {
     letter-spacing: 0.2px !important;
 }
+
 html {
     font-family: 'OpenSans', sans-serif;
     font-size: 13px;
@@ -18,27 +19,25 @@ a {
 
 a:hover, a:focus, .btn:hover {
     text-decoration: none;
-    color:#03bb4f !important;
+    color: #03bb4f !important;
 }
 
 .row {
     margin: 0;
 }
 
-.container {
-    padding: 0;
-}
-.btn:hover {
-    background-color: rgba(100,100,100,0.1);
+.btn:hover, .circle:hover {
+    background-color: rgba(100, 100, 100, 0.1);
 }
 
 .btn {
     border: #03bb4f 1px solid;
-    background-color:rgba(31,31,31,0.70);
-    color:white;
+    background-color: rgba(31, 31, 31, 0.70);
+    color: white;
     border-radius: 500px;
     min-width: 130px;
 }
+
 .site {
     display: flex;
     min-height: 100vh;
@@ -48,8 +47,8 @@ a:hover, a:focus, .btn:hover {
 .icon {
     max-width: 200px;
     position: absolute;
-    right:19%;
-    top:15%;
+    right: 19%;
+    top: 15%;
     z-index: -1;
 }
 
@@ -58,15 +57,27 @@ a:hover, a:focus, .btn:hover {
 }
 
 .bg-lightb {
-    background-color: rgba(31,31,31,0.70);
+    background-color: rgba(31, 31, 31, 0.70);
 }
 
 .bg-white {
     background-color: white;
 }
 
-.text-black{
+.text-black {
     color: #282828;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-gray {
+    color: #cccccc;
+}
+
+.text-green {
+    color: #03bb4f;
 }
 
 .mar-t {
@@ -87,6 +98,10 @@ a:hover, a:focus, .btn:hover {
 
 .t-white {
     color: white !important;
+}
+
+.no-borde {
+    border: none;
 }
 
 .no-border-radius {

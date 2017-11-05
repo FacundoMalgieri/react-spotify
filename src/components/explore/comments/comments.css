@@ -1,0 +1,25 @@
+.comment-row {
+    font-size: 13px;
+    min-height:30px;
+    padding-bottom: 3%;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.add-comment {
+    padding: 2%;
+    margin:0;
+    cursor: pointer;
+}
+.circle {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+}
+.add-comment-width{
+    width:130px;
+}

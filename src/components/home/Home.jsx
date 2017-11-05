@@ -3,7 +3,7 @@ import './Home.css'
 import icon from '../../assets/images/icon.png'
 import {Component} from 'react/cjs/react.production.min';
 import {connect} from 'react-redux';
-import * as authActions from '../../actions/actions';
+import * as actions from '../../actions/actions';
 
 class Home extends Component {
 	constructor(props, context) {
@@ -14,7 +14,7 @@ class Home extends Component {
 	getToken() {
 		console.log(this.props);
 		debugger;
-		this.props.dispatch(authActions.generateToken());
+		this.props.dispatch(actions.generateToken());
 	}
 
 	render() {
