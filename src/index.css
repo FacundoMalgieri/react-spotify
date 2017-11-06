@@ -77,7 +77,7 @@ a:hover, a:focus, .btn:hover {
 }
 
 .text-green {
-    color: #03bb4f;
+    color: #03bb4f !important;
 }
 
 .mar-t {
@@ -92,8 +92,20 @@ a:hover, a:focus, .btn:hover {
     margin-left: 2%;
 }
 
+.mar-b-1 {
+    margin-bottom: 1% !important;
+}
+
 .pad-1 {
     padding: 1%;
+}
+
+.pad-2 {
+    padding: 2%;
+}
+
+.pad-3 {
+    padding: 3% !important;
 }
 
 .t-white {
@@ -102,6 +114,10 @@ a:hover, a:focus, .btn:hover {
 
 .no-borde {
     border: none;
+}
+
+.bg-gray{
+    background: rgba(55,55,55,0.71);
 }
 
 .no-border-radius {

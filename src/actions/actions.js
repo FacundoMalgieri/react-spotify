@@ -1,4 +1,4 @@
-import {AUTH_USER_SUCCESS, SEARCH_ALBUM_SUCCESS, SEARCH_SUCCESS} from './actionTypes';
+import {AUTH_USER_SUCCESS, SAVE_COMMENT_SUCCESS, SEARCH_ALBUM_SUCCESS, SEARCH_SUCCESS} from './actionTypes';
 import axios from 'axios';
 /*
 //firebase
@@ -30,6 +30,10 @@ export function searchSuccess(res) {
 
 export function searchAlbumSuccess(res) {
 	return {type: SEARCH_ALBUM_SUCCESS, res}
+}
+
+export function saveCommentSuccess() {
+	return {type: SAVE_COMMENT_SUCCESS}
 }
 
 function isLogged() {
@@ -96,5 +100,20 @@ export function generateToken() {
 				dispatch(generateTokenSuccess());
 			}
 		}
+	}
+}
+
+export function saveComment(comment) {
+	return function (dispatch) {
+		let list = [localStorage.getItem('comments')];
+		if (list) {
+			debugger
+			list.push(JSON.stringify(comment));
+			localStorage.setItem('comments', list);
+		} else {
+			debugger
+			localStorage.setItem('comments', JSON.stringify(comment));
+		}
+		dispatch(saveCommentSuccess());
 	}
 }

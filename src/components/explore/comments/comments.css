@@ -1,16 +1,31 @@
 .comment-row {
     font-size: 13px;
-    min-height:30px;
+    min-height: 30px;
     padding-bottom: 3%;
     line-height: 2;
     cursor: pointer;
 }
 
+.img-thumb {
+    width: 70px;
+    height: 70px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: no-repeat center;
+    background-size: cover;
+}
+
 .add-comment {
     padding: 2%;
-    margin:0;
+    margin: 0;
     cursor: pointer;
 }
+
+.min-width {
+    min-width: 300px;
+}
+
 .circle {
     display: inline-block;
     height: 40px;
@@ -20,6 +35,69 @@
     border-radius: 30px;
     text-align: center;
 }
-.add-comment-width{
-    width:130px;
+
+.add-comment-width {
+    width: 130px;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.input-email {
+    border: #363636 1px solid;
+    background-color: rgba(31, 31, 31, 0.70);
+    color: #03bb4f !important;
+    border-radius: 500px;
+    min-width: 130px;
+    padding: 2px 2px 2px 8px;
+    width: 100%;
+}
+
+.input-textarea {
+    border: #363636 1px solid;
+    background-color: rgba(31, 31, 31, 0.70);
+    color: #03bb4f !important;
+    border-radius: 5px;
+    min-width: 130px;
+    min-height: 70px;
+    padding: 2px 2px 2px 8px;
+    width: 100%;
+}
+
+td {
+    padding: 2% !important;
+    min-width: 100px;
+}
+
+.input-email::-webkit-input-placeholder {
+    color: #03bb4f !important;
+}
+
+.input-email:-moz-placeholder { /* Firefox 18- */
+    color: #03bb4f !important;
+}
+
+.input-email::-moz-placeholder { /* Firefox 19+ */
+    color: #03bb4f !important;
+}
+
+.input-email:-ms-input-placeholder {
+    color: #03bb4f !important;
+}
+
+.input-textarea::-webkit-input-placeholder {
+    color: #03bb4f !important;
+}
+
+.input-textarea:-moz-placeholder { /* Firefox 18- */
+    color: #03bb4f !important;
+}
+
+.input-textarea::-moz-placeholder { /* Firefox 19+ */
+    color: #03bb4f !important;
+}
+
+.input-textarea:-ms-input-placeholder {
+    color: #03bb4f !important;
 }

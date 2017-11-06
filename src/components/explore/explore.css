@@ -3,10 +3,27 @@
     border-radius: 500px;
     padding: 5px;
     padding-left: 10px;
-    color: black;
+    color: black!important;
 }
 
 .search:focus {
     outline: 0;
 }
+
+.search::-webkit-input-placeholder {
+    color:black
+}
+
+.search:-moz-placeholder { /* Firefox 18- */
+    color:black
+}
+
+.search::-moz-placeholder { /* Firefox 19+ */
+    color:black
+}
+
+.search:-ms-input-placeholder {
+    color:black
+}
+
 
