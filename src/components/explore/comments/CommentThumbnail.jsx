@@ -2,12 +2,16 @@ import React from 'react';
 import '../comments/comments.css';
 import AddComments from './AddComments';
 import Comment from './Comment';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as actions from '../../../actions/actions'
 
 export class CommentThumbnail extends React.Component {
 	constructor(props, context) {
 		super(props, context);
 		this.state = {
-			active: true
+			comments: this.props.actions.loadComments(),
+			active: true,
 		};
 		this.toggleAddComments = this.toggleAddComments.bind(this);
 	}
@@ -26,21 +30,11 @@ export class CommentThumbnail extends React.Component {
 		} else {
 			addCommentButton = <div>Add comment <span className="circle text-green bg-lightb">+</span></div>
 		}
-		const comments = [
-			{
-				image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/a/a6/Rick_Sanchez.png/revision/latest?cb=20160923150728',
-				email: 'ricksanchez@gmail.com',
-				text: 'I rather hear inter dimensional music'
-			},
-			{
-				image: 'https://pre00.deviantart.net/04fa/th/pre/i/2015/012/0/3/p8x62axl_by_yourlovelytimelady-d8do89v.jpg',
-				email: 'ericcartman@gmail.com',
-				text: 'Hippies cant stand death metal'
-			},
-		];
 		const isActive = this.state.active;
+		const {comments} = this.props;
+
 		let i = 0;
-		if (this.props.item && this.props.item.images) {
+		if (this.props.item && this.props.item.images && comments) {
 			return (
 				<div>
 					<div className="comment-row">
@@ -57,13 +51,23 @@ export class CommentThumbnail extends React.Component {
 						})
 					}
 				</div>
-			)
-				;
+			);
 		}
-
-		else
-			return null
+		else return null
 	}
 }
-;
-export default CommentThumbnail;
+
+function mapStateToProps(state, ownProps) {
+	return {
+		comments: state.reducer
+	};
+
+}
+
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(actions, dispatch)
+	};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CommentThumbnail);

@@ -101,3 +101,10 @@ td {
 .input-textarea:-ms-input-placeholder {
     color: #03bb4f !important;
 }
+
+@media only screen and (max-width: 615px) {
+    .comment-row {
+        padding-bottom: 5%;
+    }
+    
+}

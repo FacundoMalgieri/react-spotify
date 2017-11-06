@@ -2,7 +2,7 @@ import React from 'react';
 import ResultThumbnail from './ResultThumbnail';
 
 const ResultsList = ({results}) => {
-	if (results && results[0] && results[0].albums.items) {
+	if (results && results[0] && results[0].albums) {
 		return (
 			<div className="mar-t">
 				{results.map(result =>

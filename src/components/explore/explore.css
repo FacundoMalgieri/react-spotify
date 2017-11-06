@@ -3,7 +3,7 @@
     border-radius: 500px;
     padding: 5px;
     padding-left: 10px;
-    color: black!important;
+    color: black !important;
 }
 
 .search:focus {
@@ -11,19 +11,19 @@
 }
 
 .search::-webkit-input-placeholder {
-    color:black
+    color: #ccc;
 }
 
 .search:-moz-placeholder { /* Firefox 18- */
-    color:black
+    color: #ccc;
 }
 
 .search::-moz-placeholder { /* Firefox 19+ */
-    color:black
+    color: #ccc;
 }
 
 .search:-ms-input-placeholder {
-    color:black
+    color: #ccc;
 }
 
 

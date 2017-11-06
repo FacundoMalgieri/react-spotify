@@ -1,4 +1,10 @@
-import {AUTH_USER_SUCCESS, SAVE_COMMENT_SUCCESS, SEARCH_ALBUM_SUCCESS, SEARCH_SUCCESS} from './actionTypes';
+import {
+	AUTH_USER_SUCCESS,
+	SAVE_COMMENT_SUCCESS,
+	LOAD_COMMENT_SUCCESS,
+	SEARCH_ALBUM_SUCCESS,
+	SEARCH_SUCCESS
+} from './actionTypes';
 import axios from 'axios';
 /*
 //firebase
@@ -32,8 +38,12 @@ export function searchAlbumSuccess(res) {
 	return {type: SEARCH_ALBUM_SUCCESS, res}
 }
 
-export function saveCommentSuccess() {
-	return {type: SAVE_COMMENT_SUCCESS}
+export function saveCommentSuccess(comment) {
+	return {type: SAVE_COMMENT_SUCCESS, comment}
+}
+
+export function loadCommentsSuccess(list) {
+	return {type: LOAD_COMMENT_SUCCESS, list}
 }
 
 function isLogged() {
@@ -105,15 +115,25 @@ export function generateToken() {
 
 export function saveComment(comment) {
 	return function (dispatch) {
-		let list = [localStorage.getItem('comments')];
-		if (list) {
-			debugger
-			list.push(JSON.stringify(comment));
-			localStorage.setItem('comments', list);
-		} else {
-			debugger
-			localStorage.setItem('comments', JSON.stringify(comment));
-		}
-		dispatch(saveCommentSuccess());
+		debugger
+		dispatch(saveCommentSuccess(comment));
+	}
+}
+
+export function loadComments() {
+	return function (dispatch) {
+		let list = [
+			{
+				image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/a/a6/Rick_Sanchez.png/revision/latest?cb=20160923150728',
+				email: 'ricksanchez@gmail.com',
+				text: 'I rather hear inter dimensional music'
+			},
+			{
+				image: 'https://pre00.deviantart.net/04fa/th/pre/i/2015/012/0/3/p8x62axl_by_yourlovelytimelady-d8do89v.jpg',
+				email: 'ericcartman@gmail.com',
+				text: 'Hippies cant stand death metal'
+			}
+		];
+		dispatch(loadCommentsSuccess(list));
 	}
 }
