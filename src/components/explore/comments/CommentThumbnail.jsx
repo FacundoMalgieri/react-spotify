@@ -11,7 +11,7 @@ export class CommentThumbnail extends React.Component {
 		super(props, context);
 		this.state = {
 			comments: this.props.actions.loadComments(),
-			active: true,
+			active: false,
 		};
 		this.toggleAddComments = this.toggleAddComments.bind(this);
 	}

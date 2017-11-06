@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const ResultThumbnail = ({item,buttonText,buttonUrl}) => {
 	if (item && item.images) {
 		return (
-			<div className='bg-lightb row mar-b'>
+			<div className='bg-lightb pad-1 row mar-b'>
 				<div className="col-md-3">
 					<img src={item.images[0].url} alt='Album' className='thumbnail-image'/>
 				</div>
@@ -17,7 +17,7 @@ const ResultThumbnail = ({item,buttonText,buttonUrl}) => {
 						<span><i className='glyphicon glyphicon-volume-up'></i></span>
 						<span id='on-spotify'> Listen on Spotify</span>
 					</a>
-					<br/>
+					<br className="space"/>
 					<Link to={buttonUrl} className="btn btn-lg btn-default pull-right
 						btn-comments">{buttonText}</Link>
 				</div>

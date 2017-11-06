@@ -68,7 +68,11 @@
 @media only screen and (max-width: 991px) {
     .thumbnail-image {
         width: 50%;
-        height: 50%;
+        height: 50%; margin-bottom: 3%;
+    }
+
+    .row {
+        padding: 2%;
     }
 
     .col-md-3 {
@@ -90,7 +94,15 @@
     }
 
     #album-name {
-        font-size: 30px;
+        font-size: 20px;
+    }
+
+    #artist-name {
+        font-size: 13px;
+    }
+
+    .space{
+        line-height: 7;
     }
 
     .glyphicon {

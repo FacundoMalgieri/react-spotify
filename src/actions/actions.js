@@ -6,17 +6,17 @@ import {
 	SEARCH_SUCCESS
 } from './actionTypes';
 import axios from 'axios';
-/*
+
 //firebase
 export const baseUrl = 'https://react-spotify.firebaseapp.com/';
 const clientId = '1d9f5980b46b4affb07751dd3a0382d8';
 const redirectUri = 'https://react-spotify.firebaseapp.com/explore';
-*/
+/*
 //localHost
 export const baseUrl = 'http://localhost:3000/';
 const clientId = 'ec3574b3c9354899855b2339601fdc47';
 const redirectUri = 'http://localhost:3000/explore';
-
+*/
 const scope = 'user-follow-modify user-follow-read user-library-read user-library-modify user-read-private user-read-birthdate user-read-email user-top-read';
 const response_type = 'token';
 
